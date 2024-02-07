@@ -1,5 +1,5 @@
 import React, { useState,useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams,useNavigate } from 'react-router-dom';
 
 function Landing() {
     const [noButtonPosition, setNoButtonPosition] = useState({ x: 200, y: 200 }); // Initial position of "No" button
@@ -7,6 +7,7 @@ function Landing() {
     const { id } = useParams();
     const [isOpen, setIsOpen] = useState(false);
     let [data,setData] = useState({})
+    const navigate = useNavigate();
 
     useEffect(() => {
         // Extract the encoded data from the URL
@@ -43,7 +44,7 @@ function Landing() {
     <React.Fragment>
        {!isOpen ? ( <div className="flex justify-center items-center h-screen ">
             <div className="text-center flex items-center flex-col">
-                <h1 className="text-4xl font-bold text-red-500 drop-shadow-md">Will you be my valentine , {data?.name} ? </h1>
+                <h1 className="text-4xl font-bold text-red-500 drop-shadow-md font-serif italic heading">Will you be my valentine , {data?.name} ? </h1>
                 <div className='pt-16'>
                     <div className="heart1 drop-shadow-md"></div>
                 </div>
@@ -68,11 +69,11 @@ function Landing() {
                 </div>
             </div>
         </div> ) : (
-                <div className="flex justify-center items-center  h-screen">
+                <div className="flex justify-center items-center flex-col  h-screen">
                          <div class="container">
                             <div class="valentines ">
                                 <div class="envelope">
-                                    <div class="card">
+                                    <div class="card text-center " data-content={`Lets go to ${data.location} at ${data.time} ❤️`}>
                                         <div class="text">
                                             Happy  Valentines's Day
                                         </div>
@@ -82,6 +83,7 @@ function Landing() {
                                 <div class="front mx-auto"></div>
                             </div>
                         </div>
+                        <button className='absolute bottom-12' onClick={()=>{navigate('/')}}>Create your own</button>
                     </div>
             )
         }

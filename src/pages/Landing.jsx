@@ -34,7 +34,7 @@ const Landing = () => {
 
 
   return (
-    <div className="contact-us">
+    <div className="contact-us ">
       <form onSubmit={handleSubmit}>
         <input placeholder="His / Her Name" type="text" required name='name' 
         onChange={handleChange}/>

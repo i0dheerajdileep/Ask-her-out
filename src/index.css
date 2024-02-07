@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 
 /* heart1 */
 .heart1{
@@ -45,6 +48,9 @@
 70% {
   transform: scale(1);
 }
+}
+.heading{
+  font-family: 'Gamja Flower', sans-serif;
 }
 
 /* Apply the animation to the heart1 shape */
@@ -113,17 +119,17 @@ animation: heart1beat 3.4s infinite;
   transition: 1s;
 }
 .card::before{
-  content: 'Meet me at CR ❤️';
+  content: attr(data-content);
   position: absolute;
   top: 80px;
   left: 10px;
-  padding-left: 40px;
+
   padding-top: 10px;
   right: 10px;
   bottom: 10px;
   border: 2px solid #003049;
   border-style: dashed;
-  font-family: 'Brush Script MT', cursive;
+  font-family: 'Brush Script MT';
   font-size: 23px;
 }
 .valentines:hover .card{
@@ -165,16 +171,22 @@ animation: heart1beat 3.4s infinite;
   }
 }
  /* form */
+ html{
+  height: 100vh;
+  width: 100vw;
+ }
  body {
   background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/38816/image-from-rawpixel-id-2210775-jpeg.jpg") center center no-repeat;
   background-size: cover;
-  width: 100vw;
-  height: 100vh;
+  background-color: #fff7af;
+  width: 100%;
+  min-height: 100vh;
   display: grid;
   align-items: center;
   justify-items: center;
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 
 .contact-us {
@@ -182,6 +194,7 @@ animation: heart1beat 3.4s infinite;
   padding: 50px 100px;
   border: 2px solid rgba(0, 0, 0, 1);
   box-shadow: 15px 15px 1px #ffa580, 15px 15px 1px 2px rgba(0, 0, 0, 1);
+  /* margin: 50px; */
 }
 
 input {
@@ -194,7 +207,7 @@ input {
   border: none;
   border-bottom: 5px solid rgba(0, 0, 0, 1);
   background: #f8f4e5;
-  min-width: 250px;
+  width: auto;
   padding-left: 5px;
   outline: none;
   color: rgba(0, 0, 0, 1);
@@ -218,7 +231,7 @@ button {
 }
 
 button:hover {
-  background: rgba(0, 0, 0, 1);
+  /* background: rgba(0, 0, 0, 1); */
   color: white;
   border: 1px solid rgba(0, 0, 0, 1);
 }
