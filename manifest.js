@@ -1,9 +1,9 @@
 export const manifestForPlugIn = {
     registerType:'prompt',
-    includeAssests:['favicon.ico', "apple-touc-icon.png", "masked-icon.svg"],
+    includeAssests: ['assets/favicon.ico', 'assets/apple-touch-icon.png', 'assets/masked-icon.svg'],
     manifest:{
-      name:"React-vite-app",
-      short_name:"react-vite-app",
+      name:"EverAfter",
+      short_name:"EverAfter",
       description:"I am a simple vite app",
       icons:[{
         src: '/android-chrome-192x192.png',

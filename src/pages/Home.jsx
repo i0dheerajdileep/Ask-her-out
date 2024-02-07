@@ -67,6 +67,7 @@ function Landing() {
                         </button>
                     )}
                 </div>
+                {/* <a href="https://www.buymeacoffee.com/dheerajdileep" className='!bottom-5 absolute'><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=☕&slug=dheerajdileep&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff" /></a> */}
             </div>
         </div> ) : (
                 <div className="flex justify-center items-center flex-col  h-screen">
@@ -83,7 +84,8 @@ function Landing() {
                                 <div class="front mx-auto"></div>
                             </div>
                         </div>
-                        <button className='absolute bottom-12' onClick={()=>{navigate('/')}}>Create your own</button>
+                        <button className='absolute bottom-24' onClick={()=>{navigate('/')}}>Create your own</button>
+                        {/* <a href="https://www.buymeacoffee.com/dheerajdileep" className='!bottom-5  absolute'><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=☕&slug=dheerajdileep&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff" /></a> */}
                     </div>
             )
         }
