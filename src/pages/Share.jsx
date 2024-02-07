@@ -26,7 +26,7 @@ console.log(myUrl)
         // Replace these with your actual values
         const payload = {
         //   url: myUrl,
-            url: "https://www.google.com", 
+            url: myUrl, 
         };
   
         // Make the POST request using Axios
