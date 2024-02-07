@@ -1,12 +1,30 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
 function Landing() {
     const [noButtonPosition, setNoButtonPosition] = useState({ x: 200, y: 200 }); // Initial position of "No" button
     const [noPos, setNoPos] = useState(false);
     const { id } = useParams();
-    console.log(id,"sdgsg")
     const [isOpen, setIsOpen] = useState(false);
+    let [data,setData] = useState({})
+
+    useEffect(() => {
+        // Extract the encoded data from the URL
+        // Convert the hexadecimal data back to its original form
+        const decodedData = JSON.parse(hexToAscii(id));
+        
+        setData(JSON.parse(decodedData))
+        decodedData && console.log(data)
+      }, []);
+    
+      // Function to convert hexadecimal to ASCII
+      const hexToAscii = (hex) => {
+        const bytes = [];
+        for (let i = 0; i < hex.length; i += 2) {
+          bytes.push(parseInt(hex.substr(i, 2), 16));
+        }
+        return new TextDecoder().decode(new Uint8Array(bytes));
+      };
 
     
 
@@ -23,11 +41,11 @@ function Landing() {
 
     return (
     <React.Fragment>
-       {!isOpen ? ( <div className="flex justify-center items-center h-screen bg-gradient-to-br from-red-700 to-white">
+       {!isOpen ? ( <div className="flex justify-center items-center h-screen ">
             <div className="text-center flex items-center flex-col">
-                <h1 className="text-4xl font-bold text-white">Will you be my valentine , {id}</h1>
+                <h1 className="text-4xl font-bold text-red-500 drop-shadow-md">Will you be my valentine , {data?.name} ? </h1>
                 <div className='pt-16'>
-                    <div className="heart1"></div>
+                    <div className="heart1 drop-shadow-md"></div>
                 </div>
                 <div className='pt-10 gap-9 flex'>
                     <button className='px-14 py-3 bg-red-700 rounded-lg text-white' onClick={handleYesClick}>Yes</button>
@@ -50,7 +68,7 @@ function Landing() {
                 </div>
             </div>
         </div> ) : (
-                <div className="flex justify-center items-center  h-screen bg-gradient-to-br from-red-700 to-white">
+                <div className="flex justify-center items-center  h-screen">
                          <div class="container">
                             <div class="valentines ">
                                 <div class="envelope">
