@@ -71,17 +71,17 @@ function Landing() {
             </div>
         </div> ) : (
                 <div className="flex justify-center items-center flex-col  h-screen">
-                         <div class="container">
-                            <div class="valentines ">
-                                <div class="envelope">
-                                    <div class="card text-center " data-content={`Lets go to ${data.location} at ${data.time} ❤️`}>
-                                        <div class="text">
+                         <div className="container">
+                            <div className="valentines ">
+                                <div className="envelope">
+                                    <div className="card text-center customFont" data-content={`Lets go to ${data.location} at ${data.time} ❤️`}>
+                                        <div className="text">
                                             Happy  Valentines's Day
                                         </div>
-                                        <div class="heart"></div>
+                                        <div className="heart"></div>
                                     </div>
                                 </div>
-                                <div class="front mx-auto"></div>
+                                <div className="front mx-auto"></div>
                             </div>
                         </div>
                         <button className='absolute bottom-24' onClick={()=>{navigate('/')}}>Create your own</button>

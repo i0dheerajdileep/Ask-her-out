@@ -129,7 +129,7 @@ animation: heart1beat 3.4s infinite;
   bottom: 10px;
   border: 2px solid #003049;
   border-style: dashed;
-  font-family: 'Brush Script MT';
+  /* font-family: 'Brush Script MT'; */
   font-size: 23px;
 }
 .valentines:hover .card{
@@ -247,4 +247,8 @@ input:-webkit-autofill:focus {
   -webkit-text-fill-color: #2a293e;
   -webkit-box-shadow: 0 0 0px 1000px #f8f4e5 inset;
   transition: background-color 5000s ease-in-out 0s;
+}
+
+.customFont{
+  font-family: 'Brush Script MT';
 }
