@@ -1,9 +1,10 @@
+  
 export const manifestForPlugIn = {
     registerType:'prompt',
     includeAssests: ['assets/favicon.ico', 'assets/apple-touch-icon.png', 'assets/masked-icon.svg'],
     manifest:{
-      name:"EverAfter",
-      short_name:"EverAfter",
+      name:"premalu",
+      short_name:"premalu",
       description:"I am a simple vite app",
       icons:[{
         src: '/android-chrome-192x192.png',
