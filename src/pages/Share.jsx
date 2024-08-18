@@ -91,7 +91,7 @@ console.log(myUrl)
           {/* Button to copy the URL to the clipboard */}
           <div className='flex flex-col justify-center items-center gap-10'>
             <button onClick={handleCopy}>Copy to Clipboard</button>
-            <button onClick={handleSendToWhatsApp}>Send to whatsapp</button>
+            <button onClick={handleSendToWhatsApp}>Send via whatsapp</button>
           </div>
         </div>
       )}

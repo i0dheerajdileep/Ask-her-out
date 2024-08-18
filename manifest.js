@@ -3,8 +3,8 @@ export const manifestForPlugIn = {
     registerType:'prompt',
     includeAssests: ['assets/favicon.ico', 'assets/apple-touch-icon.png', 'assets/masked-icon.svg'],
     manifest:{
-      name:"premalu",
-      short_name:"premalu",
+      name:"askherout",
+      short_name:"askherout",
       description:"I am a simple vite app",
       icons:[{
         src: '/android-chrome-192x192.png',

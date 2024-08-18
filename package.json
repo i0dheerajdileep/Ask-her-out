@@ -1,8 +1,8 @@
 {
-  "name": "premalu",
+  "name": "Ask her out",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://i0dheerajdileep.github.io/Premalu",
+  "homepage": "www.askherout.in",
   "type": "module",
   "scripts": {
     "dev": "vite",
